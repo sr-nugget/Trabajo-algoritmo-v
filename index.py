@@ -1,8 +1,9 @@
 daño = 0
 vida = 100
+mascota =  False
 print("GUARDIAN TALES")
-inicio = input("Escribe enter para entrar(Si no quieres pon Tung Tung Tung Tung Tung Tung Tung Saur) ")
-if inicio == "enter":
+inicio = input("Escribe ENTER para entrar(Si no quieres pon Tung Tung Tung Tung Tung Tung Tung Saur) ")
+if inicio == "ENTER":
     print("*Musiquita*")
     continuar = True
 elif inicio == "Tung Tung Tung Tung Tung Tung Tung Saur":
@@ -60,14 +61,16 @@ if continuar == True:
             daño = 0
     print("Tras avanzar te encuentras con un extraño ser oscuro, tambien tiene un casco y tiene unas marcas rojas")
     print("El enemigo tiene 20 de vida y 100 de daño")
-    ataque = input("1.ATACAR 2.DEFENDER 3.XD" )
+    ataque = input("1.ATACAR 2.DEFENDER 3.XD ")
     if ataque == "1" and recoger == "1":
         print("*Le quitas 30 de vida")
         print("Se murio UwU")
-    elif ataque == "2" and daño == 0:
+    elif ataque == "2" and daño == 0 or ataque == "1" and daño == 0:
         print("Te moriste waton :()")
         continuar = False
         print("FIN DEL JUEGO")
+    elif ataque == "2":
+        print("Eres tan bacan que bloqueas tan bien el attaque que el enemigo vibra y ecplota :3")
     elif ataque == "3":
         print("Tu y el ser invasor del reino se besan apasionadamente, que momento mas romantico, pero..... te deja pasae sin problemas y te regala un arma")
         daño = 1000
@@ -78,7 +81,9 @@ if continuar == True:
         print("Este nuevo ser parece ser un insecto gigante, tiene una masa verde en su parte infeior")
         print("Es hora de luchar por el reino")
         print("POR KANTERBURY")
-        print("Datos del monstruo: Vida = 60  Ataque = 50")
+        print(f"Datos del monstruo:\n"
+              "Vida = 60\n"  
+              "Ataque = 66\n")
         vida_monstruo = 60
         atack = input(f"Que haras para salvar tu reino {nombre} (1.Atacar 2.Actuar) ")
         if atack == "1":
